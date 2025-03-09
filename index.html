@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salua Union Blood Donors Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer img {
+            height: 50px;
+            border-radius: 50%;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+            section {
+                padding: 10px;
+            }
+            footer div {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="20250309_141724.png" alt="Salua Union Blood Donors Club Logo" style="height: 100px;">
+        <h1>Salua Union Blood Donors Club</h1>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p><strong>Salua Union Blood Donors Club</strong> is a community-driven initiative aimed at saving lives by connecting blood donors with those in need. Our mission is to create a reliable network of voluntary blood donors and raise awareness about the importance of blood donation.</p>
+        <h3>Our Mission</h3>
+        <p>To ensure a steady supply of blood for patients in need by encouraging voluntary blood donation and building a strong donor database.</p>
+        <h3>Our Vision</h3>
+        <p>To create a world where no one dies due to the unavailability of blood.</p>
+    </section>
+
+    <section id="donor-registration">
+        <h2>Register as a Donor</h2>
+        <form id="donorForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="bloodGroup">Blood Group:</label>
+                <select id="bloodGroup" name="bloodGroup" required>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section id="donor-search">
+        <h2>Find a Donor</h2>
+        <form id="searchForm">
+            <div class="form-group">
+                <label for="searchBloodGroup">Blood Group:</label>
+                <select id="searchBloodGroup" name="searchBloodGroup" required>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="searchLocation">Location:</label>
+                <input type="text" id="searchLocation" name="searchLocation" required>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+        <div id="searchResults">
+            <!-- Search results will be displayed here -->
+        </div>
+    </section>
+
+    <section id="events-news">
+        <h2>Events & News</h2>
+        <div class="event">
+            <h3>Blood Donation Camp</h3>
+            <p><strong>Date:</strong> March 25, 2025</p>
+            <p><strong>Location:</strong> Salua Union Community Center</p>
+            <p>Join us for a blood donation camp and help save lives!</p>
+        </div>
+        <div class="news">
+            <h3>New Donors Registered</h3>
+            <p>We have registered 50 new donors this month. Thank you for your support!</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, feel free to reach out to us.</p>
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-group">
+                <label for="contactName">Name:</label>
+                <input type="text" id="contactName" name="contactName" required>
+            </div>
+            <div class="form-group">
+                <label for="contactEmail">Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="contactMessage">Message:</label>
+                <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +8801XXX-XXXXXX</p>
+            <p><strong>Email:</strong> info@saluaunionblooddonorsclub.com</p>
+            <p><strong>Address:</strong> Salua Union, Your District, Bangladesh</p>
+        </div>
+    </section>
+
+    <footer>
+        <img src="20250309_161217.jpg" alt="Your Picture" style="height: 50px; border-radius: 50%;">
+        <p>Created by [Rabbi]</p>
+    </footer>
+</body>
+</html>
